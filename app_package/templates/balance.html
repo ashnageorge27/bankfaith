@@ -3,10 +3,17 @@
 <form action="" method="POST" novalidate>
     {{form.hidden_tag()}}
     <fieldset>
+<<<<<<< HEAD
+        <legend>NEW BALANCE</legend>
+        <p>{{form.cid.label}}{{form.cid(size=32,autofocus=True)}}
+        {% for error in form.cid.errors %}
+            <span style="color:red;">{{error}}</span>
+=======
         <legend> BALANCE</legend>
         <p>{{form.cid.label}}{{form.cid(size=32,autofocus=True)}}
         {% for error in form.cid.errors %}
             <span style="color:green;">{{error}}</span>
+>>>>>>> f29b7dc5b500141975286aefc429f62200a483fd
         {% endfor %}</p>
         
         <p>
