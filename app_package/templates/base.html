@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+        {% if title %}
+            {{title}}
+        {% else %}
+            Welcome to Flask
+        {% endif %}
+        </title>
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <link rel='stylesheet' href='/static/css/login.css'>
+        <link rel='icon' href='/static/images/abc.jpeg'>
+        <img src="/static/images/abc.jpeg" height="124">
+        
+        <BR><b>YOUR BANKING PARTNER</b>
+    </head>
+    <body>
+    
+       {%with messages=get_flashed_messages()%}
+            {%if messages%}
+            <ul>
+            {%for message in messages%}
+                <li>{{message}}</li>
+            {%endfor%}
+            </ul>
+            {%endif%}
+        {%endwith%}
+       {%block content%}{%endblock%}
+    </body>
+    </html>
+        
